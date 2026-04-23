@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fbfbfb;
+}
+
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-black text-white px-8 py-3 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-gray-800 hover:shadow-lg active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-black px-8 py-3 rounded-full font-semibold border-2 border-black transition-all duration-300 hover:bg-black hover:text-white;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white px-8 py-3 rounded-full font-semibold bg-transparent transition-all duration-300 hover:bg-white hover:text-black;
+  }
+}
+
+.input_field {
+  @apply block mt-1 border border-slate-900 p-1 w-full rounded-md;
+}
+
+/* Custom Typewriter Cursor */
+.typewriter-cursor {
+  @apply text-white ml-1;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
